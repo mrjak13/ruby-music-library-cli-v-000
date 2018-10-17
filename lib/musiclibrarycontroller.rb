@@ -59,6 +59,7 @@ class MusicLibraryController
   def list_songs_by_artist
     puts "Please enter the name of an artist:"
     input = gets
+<<<<<<< HEAD
     list = Artist.all.collect{|a| a.name == input.chomp}
     binding.pry
 
@@ -76,12 +77,27 @@ class MusicLibraryController
     #       puts "#{index}. #{song.name} - #{song.genre.name}"
     #     end
     #   end
+=======
+    list = Song.all.sort_by{|s| s.name}.uniq
+    binding.pry
+    new_list = list.collect! do |song|
+       "#{song.artist.name}" == input.chomp
+       binding.pry
+
+
+
+>>>>>>> 548cf6f22b58d40e4405f4b6dc507281e1e1b289
 
     # Song.all.sort_by{|s| s.name}.uniq.collect.with_index(1) do |song, index|
     #   if input.chomp == "#{song.artist.name}"
     #     puts "#{index}. #{song.name} - #{song.genre.name}"
     #   end
+<<<<<<< HEAD
 
+=======
+    end
+    # binding.pry
+>>>>>>> 548cf6f22b58d40e4405f4b6dc507281e1e1b289
   end
 
   def list_songs_by_genre
