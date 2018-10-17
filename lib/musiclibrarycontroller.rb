@@ -62,7 +62,7 @@ class MusicLibraryController
 # <<<<<<< HEAD
     # list = Artist.all.collect{|a| a.name == input.chomp}
     # binding.pry
-    artist = ""
+    # artist = ""
 
     Artist.all.each {|a|
       if a.name == input.chomp
