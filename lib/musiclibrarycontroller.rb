@@ -68,14 +68,14 @@ class MusicLibraryController
         artist = a
       end}
       binding.pry
-      {|a|
-      a.songs.each {|s| s.name}}.each.with_index(1) do |artist, index|
-        artist.each do |songs|
-          song.genre.name
-
-        # binding.pry
-      puts "#{index}. #{artist.name}"
-    end
+    #   {|a|
+    #   a.songs.each {|s| s.name}}.each.with_index(1) do |artist, index|
+    #     artist.each do |songs|
+    #       song.genre.name
+    # 
+    #     # binding.pry
+    #   puts "#{index}. #{artist.name}"
+    # end
 
     # new_list = []
     # Song.all.sort_by{|s| s.name}.uniq.each do |song|
@@ -86,11 +86,11 @@ class MusicLibraryController
     #     end
     #   end
 # =======
-    list = Song.all.sort_by{|s| s.name}.uniq
-    binding.pry
-    new_list = list.collect! do |song|
-       "#{song.artist.name}" == input.chomp
-       binding.pry
+    # list = Song.all.sort_by{|s| s.name}.uniq
+    # binding.pry
+    # new_list = list.collect! do |song|
+    #    "#{song.artist.name}" == input.chomp
+    #    binding.pry
 
 
 
@@ -103,7 +103,7 @@ class MusicLibraryController
 # <<<<<<< HEAD
 
 # =======
-    end
+    # end
     # binding.pry
 # >>>>>>> 548cf6f22b58d40e4405f4b6dc507281e1e1b289
   end
