@@ -63,15 +63,16 @@ class MusicLibraryController
     # list = Artist.all.collect{|a| a.name == input.chomp}
     # binding.pry
 
-    Artist.all.each {|a| 
+    Artist.all.each {|a|
       if a.name == input.chomp
         artist = a
       end}
-      binding.pry{|a|
+      binding.pry
+      {|a|
       a.songs.each {|s| s.name}}.each.with_index(1) do |artist, index|
         artist.each do |songs|
           song.genre.name
-        
+
         # binding.pry
       puts "#{index}. #{artist.name}"
     end
