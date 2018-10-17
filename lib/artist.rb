@@ -39,7 +39,7 @@ class Artist
   end
 
   def add_song(song)
-    song.artist.instance_of?(Artist) != true ? song.artist = self : nil  
+    song.artist.instance_of?(Artist) != true ? song.artist = self : nil
     song.artist.name != self.name ? song.artist.name = self : nil
     songs << song unless songs.include?(song)
   end
