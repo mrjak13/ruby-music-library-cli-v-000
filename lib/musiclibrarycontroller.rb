@@ -63,9 +63,8 @@ class MusicLibraryController
     # list = Artist.all.collect{|a| a.name == input.chomp}
     # binding.pry
 
-    Artist.all.each {|a| a.name ==  input.chomp}.sort_by{|a|
-      binding.pry
-      a.song.name}.uniq.each.with_index(1) do |artist, index|
+    Artist.all.each {|a| a.name == input.chomp}.sort_by{|a|
+      a.songs.each do |s| s.name}.uniq.each.with_index(1) do |artist, index|
         # binding.pry
       puts "#{index}. #{artist.name}"
     end
