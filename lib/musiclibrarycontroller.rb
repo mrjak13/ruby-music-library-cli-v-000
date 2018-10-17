@@ -60,14 +60,14 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     input = gets
 # <<<<<<< HEAD
-    list = Artist.all.collect{|a| a.name == input.chomp}
-    binding.pry
+    # list = Artist.all.collect{|a| a.name == input.chomp}
+    # binding.pry
 
-    # Artist.all.collect{|a| a.name == input.chomp}.sort_by{|a|
-    #   binding.pry
-    #   a.song.name}.uniq.each.with_index(1) do |artist, index|
-    #     # binding.pry
-    #   puts "#{index}. #{artist.name}"
+    Artist.all.collect{|a| a.name == input.chomp}.sort_by{|a|
+      binding.pry
+      a.song.name}.uniq.each.with_index(1) do |artist, index|
+        # binding.pry
+      puts "#{index}. #{artist.name}"
 
     # new_list = []
     # Song.all.sort_by{|s| s.name}.uniq.each do |song|
