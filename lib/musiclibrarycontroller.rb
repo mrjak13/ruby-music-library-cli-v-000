@@ -59,68 +59,23 @@ class MusicLibraryController
   def list_songs_by_artist
     puts "Please enter the name of an artist:"
     input = gets
-# <<<<<<< HEAD
-    # list = Artist.all.collect{|a| a.name == input.chomp}
-    # binding.pry
-    # artist = ""
-
     Artist.all.each {|a|
       if a.name == input.chomp
         a.songs.sort_by{|song| song.name}.each.with_index(1) do |song ,index|
         puts "#{index}. #{song.name} - #{song.genre.name}"
       end
-    end}
-      # binding.pry
-    #   {|a|
-    #   a.songs.each {|s| s.name}}.each.with_index(1) do |artist, index|
-    #     artist.each do |songs|
-    #       song.genre.name
-    #
-    #     # binding.pry
-    #   puts "#{index}. #{artist.name}"
-    # end
-
-    # new_list = []
-    # Song.all.sort_by{|s| s.name}.uniq.each do |song|
-    #    if input.chomp == "#{song.artist.name}"
-    #    new_list << song unless new_list.include?(song)
-    #    elsif new_list.each.with_index(1) do |song, index|
-    #       puts "#{index}. #{song.name} - #{song.genre.name}"
-    #     end
-    #   end
-# =======
-    # list = Song.all.sort_by{|s| s.name}.uniq
-    # binding.pry
-    # new_list = list.collect! do |song|
-    #    "#{song.artist.name}" == input.chomp
-    #    binding.pry
-
-
-
-# >>>>>>> 548cf6f22b58d40e4405f4b6dc507281e1e1b289
-
-    # Song.all.sort_by{|s| s.name}.uniq.collect.with_index(1) do |song, index|
-    #   if input.chomp == "#{song.artist.name}"
-    #     puts "#{index}. #{song.name} - #{song.genre.name}"
-    #   end
-# <<<<<<< HEAD
-
-# =======
-    # end
-    # binding.pry
-# >>>>>>> 548cf6f22b58d40e4405f4b6dc507281e1e1b289
+    end}  
   end
 
   def list_songs_by_genre
     puts "Please enter the name of a genre:"
     input = gets
-    new_list = []
-    Song.all.sort_by{|s| s.name}.uniq.each do |song|
-      if input.chomp == "#{song.genre.name}"
-        new_list
-        puts "#{index}. #{song.artist.name} - #{song.name}"
+    Genre.all.each {|g|
+      if g.name == input.chomp
+        g.songs.sort_by{|song| song.name}.each.with_index(1) do |song ,index|
+        puts "#{index}. #{song.name} - #{song.artist.name}"
       end
-    end
+    end}  
   end
 
   def play_song
