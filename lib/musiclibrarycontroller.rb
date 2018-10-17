@@ -68,6 +68,7 @@ class MusicLibraryController
       a.song.name}.uniq.each.with_index(1) do |artist, index|
         # binding.pry
       puts "#{index}. #{artist.name}"
+    end
 
     # new_list = []
     # Song.all.sort_by{|s| s.name}.uniq.each do |song|
