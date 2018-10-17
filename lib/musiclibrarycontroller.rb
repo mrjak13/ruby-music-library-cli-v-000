@@ -72,7 +72,7 @@ class MusicLibraryController
     #   a.songs.each {|s| s.name}}.each.with_index(1) do |artist, index|
     #     artist.each do |songs|
     #       song.genre.name
-    # 
+    #
     #     # binding.pry
     #   puts "#{index}. #{artist.name}"
     # end
